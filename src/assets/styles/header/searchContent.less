@@ -1,0 +1,99 @@
+.search-wrapper {
+    .center();
+    display: flex;
+    height: 122px;
+    align-items: center;
+    h1 {
+        font-size: 0;
+        a {
+            display: block;
+            img {
+                width: 126px;
+                height: 46px;
+            }
+        }
+    }
+    .search-inp {
+        margin-left: 200px;
+        position: relative;
+        input {
+            width: 460px;
+            padding: 12px 15px;
+            outline: none;
+            border: 1px solid @s-inp-border;
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+            &::placeholder {
+                color: @s-inp-placeholder;
+            }
+        }
+        .el-button {
+            color: @s-btn-font;
+            height: 42px;
+            line-height: 42px;
+            padding: 0px 25px;
+            border: none;
+            background-color: @s-btn-bg;
+            border-radius: 0 4px 4px 0;
+            .el-icon-search {
+                font-weight: 800;
+            }
+        }
+        .search-result,
+        .search-history {
+            position: absolute;
+            z-index: 999;
+            background-color: #fff;
+            width: 490px;
+            top: 42px;
+            left: 0px;
+            border: 1px solid @s-inp-border;
+            li {
+                padding: 0 15px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                cursor: pointer;
+                &:hover {
+                    background-color: @s-res-bg;
+                }
+                &:hover a {
+                    color: @t-hover;
+                }
+                a {
+                    display: block;
+                    height: 100%;
+                    color: @s-res-font;
+                }
+            }
+        }
+        .search-history{
+            padding: 0 12px;
+            color: #666;
+            box-sizing: border-box;
+            dt {
+                display: flex;
+                height: 30px;
+                font-size: 12px;
+                justify-content: space-between;
+                align-items: center;
+                span:nth-of-type(2) {
+                    cursor: pointer;
+                }
+            }
+            dd {
+                font-size: 12px;
+                color: #999;
+                height: 25px;
+                line-height: 25px;
+                cursor: pointer;
+                &:hover a{
+                    color: @t-hover;
+                }
+                a {
+                    color: #999;
+                }
+            }
+        }
+    }
+}

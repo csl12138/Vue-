@@ -1,0 +1,163 @@
+.change-city-wrapper {
+    .center();
+    background-color: #fff;
+    padding: 0px 20px;
+    margin-top: 20px;
+    .row {
+        padding: 30px 0px;
+        border-bottom: 1px solid @h-banner-border;
+        display: flex;
+        color: #333;
+    }
+    .province {
+        h4 {
+            line-height: 40px;
+        }
+        .select {
+            padding: 10px 10px 10px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            vertical-align: middle;
+            width: 150px;
+            height: 40px;
+            line-height: 20px;
+            box-sizing: border-box;
+            border: 1px solid #E5E5E5;
+            margin: 0 10px 0 15px;
+            position: relative;
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.disabled {
+                cursor: not-allowed;
+            }
+            .pop-over {
+                .title {
+                    color: #ccc;
+                    margin-bottom: 12px;
+                }
+                .wrapper {
+                    display: flex;
+                    color: #666;
+                    font-size: 12px;
+                    .province-col,
+                    .city-col {
+                        li {
+                            display: inline-block;
+                            cursor: pointer;
+                            margin-right: 12px;
+                            min-width: 70px;
+                            white-space: nowrap;
+                            box-sizing: border-box;
+                            padding: 2px 8px;
+                            margin-bottom: 9px;
+                            &:hover {
+                                border-radius: 10px;
+                                background: #F4F4F4
+                            }
+                            &.active {
+                                background-color: #FFBD00;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .search {
+            margin-left: 80px;
+            line-height: 40px;
+            position: relative;
+            input {
+                outline: none;
+                margin-left: 15px;
+                width: 180px;
+                padding: 10px 0px 10px 7px;
+                border-radius: 6px;
+                border: 1px solid @h-banner-border;
+            }
+            .searchList {
+                width: 120px;
+                max-height: 300px;
+                overflow-y: scroll;
+                font-size: 12px;
+                color: #666;
+                li {
+                    cursor: pointer;
+                    height: 30px;
+                    line-height: 20px;
+                    &:hover {
+                        color: #FFBD00;
+                    }
+                }
+            }
+        }
+    }
+    .hot-city,
+    .visited {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 30px;
+            li {
+                cursor: pointer;
+                margin-right: 40px;
+            }
+        }
+    }
+    .choose {
+        display: block;
+        border: none;
+        .content-top {
+            display: flex;
+            margin-bottom: 45px;
+            ul {
+                margin-left: 20px;
+                display: flex;
+                li {
+                    margin-right: 30px;
+                    a {
+                        color: #666;
+                    }
+                }
+            }
+        }
+        .content-bottom {
+            dl {
+                display: flex;
+                margin-left: 30px;
+                padding: 25px 10px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                transition: background-color .3s;
+                dt {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    color: #222;
+                    margin-right: 25px;
+                    background-color: #FFD000;
+                }
+                .dd-wrapper {
+                    margin-top: 12px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 14px;
+                    color: #666;
+                    dd {
+                        margin-right: 15px;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                    }
+                }
+                &:hover {
+                    background-color: #F8F8F8;
+                }
+            }
+        }
+    }
+}

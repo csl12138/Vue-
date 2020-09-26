@@ -1,0 +1,125 @@
+.pro-card {
+    padding: 10px 0;
+    border-top: 1px solid @h-banner-border;
+    display: flex;
+    .left-img {
+        flex-shrink: 0;
+        margin-right: 20px;
+        img {
+            width: 220px;
+            height: 125px;
+            border-radius: 5px;
+        }
+    }
+    .right-content {
+        flex-grow: 1;
+        .title {
+            display: inline-block;
+            color: #333;
+            margin-bottom: 6px;
+            margin-top: 4px;
+        }
+        .score {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            .el-rate__icon {
+                margin-right: 3px;
+            }
+            .el-rate__text {
+                font-size: 12px;
+                margin-left: 10px;
+            }
+            .val {
+                color: #666;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+            .comments {
+                color: #ff9900;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+        .detail {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 6px;
+            .desc {
+                display: inline-block;
+                width: 110px;
+                .textHidden();
+            }
+            .address {
+                margin-left: 8px;
+            }
+            .map {
+                cursor: pointer;
+                color: #222;
+                margin-left: 10px;
+                .el-icon-map-location {
+                    color: #e9981f;
+                    margin-right: 3px;
+                }
+            }
+        }
+        .avg {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .discount {
+            padding-top: 12px;
+            border-top: 1px dotted @h-banner-border;
+            .discount-item {
+                cursor: pointer;
+                padding: 9px 3px;
+                margin-bottom: 8px;
+                transition: all .2s;
+                &:hover {
+                    background-color: #F8F8F8;
+                    border-radius: 4px;
+                }
+                &:hover .title {
+                    color: #ff9900;
+                }
+                .title {
+                    font-size: 14px;
+                    color: #666;
+                }
+                .desc {
+                    font-size: 12px;
+                    color: #999;
+                    .price {
+                        margin-right: 10px;
+                        color: #ff6600;
+                        .rmb {
+                            font-size: 16px;
+                        }
+                    }
+                    .origin {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .more {
+                margin-top: 10px;
+                padding-left: 9px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #666;
+                &:hover {
+                    color: #ff9900;
+                }
+            }
+        }
+    }
+}
+.v-enter,
+.v-leave-to {
+    opacity: 0;
+}
+.v-enter-to,
+.v-leave {
+    opacity: 1;
+}

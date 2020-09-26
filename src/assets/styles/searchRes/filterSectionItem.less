@@ -1,0 +1,86 @@
+.filter-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    .left {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        .title {
+            margin-right: 40px;
+            min-width: 60px;
+            color: #333;
+        }
+        .all {
+            color: #222;
+            margin-right: 40px;
+            cursor: pointer;
+            width: 50px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            &.active {
+                border-radius: 15px;
+                background-color: rgb(255, 189, 0);
+            }
+        }
+    }
+    .choosen {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        border-bottom: 1px solid @h-banner-border;
+        li {
+            position: relative;
+            margin-right: 120px;
+            margin-bottom: 18px;
+            .main {
+                padding: 0 10px;
+                height: 25px;
+                line-height: 25px;
+                &.active { 
+                    border-radius: 15px;
+                    background-color: rgb(255, 189, 0);
+                }
+            }
+            &:hover .pop-over{
+                opacity: 1;
+                visibility: visible;
+            }
+            .pop-over {
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s ease-in-out;
+                left: 0;
+                top: 28px;
+                dl {
+                    width: 370px;
+                    padding-left: 10px;
+                    padding-bottom: 10px;
+                    box-sizing: border-box;
+                    dt {
+                        font-size: 16px;
+                        color: #ccc;
+                        padding-bottom: 10px;
+                    }
+                    dd {
+                        display: inline-block;
+                        padding: 3px;
+                        margin-top: 10px;
+                        margin-right: 10px;
+                        font-size: 12px;
+                        color: #666;
+                        cursor: pointer;
+                        &.active {
+                            border-radius: 15px;
+                            background-color: rgb(255, 189, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

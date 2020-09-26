@@ -1,0 +1,179 @@
+.top-wrapper {
+    font-size: 12px;
+    background-color: @t-Wbg;
+    .top-container {
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        .center();
+        .left {
+            display: flex;
+            a {
+                color: @t-tint;
+                &:hover {
+                    color: @t-hover;
+                }
+            }
+            .geo {
+                display: flex;
+                align-items: center;
+                color: @t-deep;
+                .change-city {
+                    display: inline-block;
+                    height: 22px;
+                    padding: 0 2px;
+                    margin: 0px 7px;
+                    line-height: 22px;
+                    border-radius: 4px;
+                    border: 1px solid @t-border;
+                    color: @t-deep;
+                    background-color: @t-Cbg;
+                    &:hover {
+                        color: @t-hover;
+                    }
+                }
+                .near {
+                    color: @t-tint;
+                    a {
+                        padding-right: 3px;
+                    }
+                }
+            }
+            .login-box {
+                margin-left: 25px;
+                color: #999;
+                .red {
+                    color: @t-hover;
+                    padding-right: 8px;
+                }
+                span {
+                    cursor: pointer;
+                    &:hover {
+                        color: @t-hover;
+                    }
+                }
+            }
+        }
+        .nav {
+            display: flex;
+            li {
+                position: relative;
+                color: @t-tint;
+                a {
+                    color: @t-tint;
+                }
+                .main {
+                    position: relative;
+                    padding: 0 12px;
+                    z-index: 10;
+                    border-left: 1px solid transparent;
+                    border-right: 1px solid transparent;
+                }
+                &.drop:hover>.main {
+                    background-color: #fff;
+                    border-color: @t-border;
+                    border-bottom: 1px solid #fff;
+                    box-shadow: 0px -3px 4px rgba(0, 0, 0, .1);
+                }
+                &:hover>.main a {
+                    color: @t-hover;
+                }
+                &.drop:hover .drop-list {
+                    display: block;
+                }
+                &.drop:hover .drop-list.sub-nav {
+                    display: flex;
+                }
+                &.drop .drop-list {
+                    display: none;
+                    text-align: center;
+                    position: absolute;
+                    z-index: 9;
+                    top: 40px;
+                    background-color: #fff;
+                    box-sizing: border-box;
+                    border: 1px solid @t-border;
+                    box-shadow: 0px 3px 4px rgba(0, 0, 0, .1);
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    a:hover {
+                        color: @t-hover;
+                    }
+                }
+                &.drop .drop-list.my-mt,
+                &.drop .drop-list.mt-rules{
+                    width: 100%;
+                    left: 0px;
+                }
+                &.drop .drop-list.sale-center {
+                    width: 145%;
+                    right: 0px;
+                    border-top-left-radius: 3px;
+                }
+                &.drop .drop-list.sub-nav {
+                    width: @full-width;
+                    right: 0px;
+                    align-items: flex-start;
+                    padding-bottom: 45%;
+                    dl {
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        dt {
+                            width: 100%;
+                            height: 60px;
+                            line-height: 60px;
+                            font-size: 14px;
+                            color: @t-subTitle;
+                            font-weight: 500
+                        }
+                        dd {
+                            height: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                    .hotel {
+                        width: 26%;
+                        padding: 0 3%;
+                        dd {
+                            width: 32%;
+                        }
+                    }
+                    .food {
+                        width: 14%;
+                        padding: 0 2%;
+                        dd {
+                            width: 48%;
+                        }
+                    }
+                    .movie {
+                        width: 18%;
+                        padding: 0 2%;
+                        dd {
+                            width: 100%;
+                        }
+                    }
+                    .app {
+                        flex: 1 1 auto;
+                        padding-left: 2%;
+                        justify-content: center;
+                        dd {
+                            margin-right: 3%;
+                            margin-top: 3%;
+                            a {
+                                display: block;
+                                img {
+                                    width: 60px;
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
